@@ -1,0 +1,110 @@
+table_number,table_name,page,interacting_drug_class,mechanism,clinical_comments,arv_drug
+3,Boosted Atazanavir,15,reducing agents interfere with ATV absorption.,,• PPIs may markedly reduce ATV concentration and AUC.  • Unboosted ATV: Do not coadminister with PPIs  if it is possible,Boosted Atazanavir
+3,Boosted Atazanavir,16,"hyperplasia  Boosted or unboosted ATV (i.e., with or without COBI or RTV)","inhibits CYP3A4 and other transporters.  • Alfuzosin, silodosin Concomitant use is contraindicated.","• Doxazosin, terazosin:  PIs may be used concurrently; potential",Boosted Atazanavir
+3,Boosted Atazanavir,17,fibrillation: No dose adjustments are necessary.,,‒ For patients with DVT and PE: Administer edoxaban 30 mg,Boosted Atazanavir
+3,Boosted Atazanavir,17,once daily.,,"• Rivaroxaban:  Do not coadminister. • Warfarin:  Use cautiously with warfarin; if use is necessary,",Boosted Atazanavir
+3,Boosted Atazanavir,17,increase INR monitoring.,,"‒ If INR increases, decrease warfarin dose.",Boosted Atazanavir
+3,Boosted Atazanavir,18,injected corticosteroids,"[Saberi, et al. 2013; Daveluy, et al. 2009]  • Boosted PIs are strong inhibitors of CYP3A, and many",,Boosted Atazanavir
+3,Boosted Atazanavir,19,Class or Drug  Mechanism of Action  Clinical Comments,,• Brexpiprazole:  Administer at 50% of brexpiprazole dose and,Boosted Atazanavir
+3,Boosted Atazanavir,19,adjust dose as necessary.,,• Lumateperone:  Do not coadminister. • Pimozide:  Concomitant use is contraindicated. • Risperidone: Initiate at low dose and titrate slowly to achieve,Boosted Atazanavir
+3,Boosted Atazanavir,19,clinical effect; monitor for adverse effects.,,"• Ziprasidone:  Monitor for adverse effects, including QTc",Boosted Atazanavir
+3,Boosted Atazanavir,20,Nonopioid pain medications  • Eletriptan: Metabolism inhibited by boosted PIs.,,• TCAs:  PIs and TCAs can both cause QT prolongation.  • Eletriptan:  Do not coadminister; use alternative triptan,Boosted Atazanavir
+3,Boosted Atazanavir,20,medication.,,"• TCAs:  With concomitant use of high -dose TCAs and PIs,",Boosted Atazanavir
+3,Boosted Atazanavir,21,these analgesics accordingly.,"Tramadol Tramadol exposure is increased with CYP3A inhibition, but this",,Boosted Atazanavir
+3,Boosted Atazanavir,22,COVID -19 therapeutics  • Molnupiravir and monoclonal antibodies  do not affect,"CYP450, P -gP, or other drug metabolism transporters. • Nirmatrelvir/RTV: Inhibition of CYP3A4, P -gP, and other",,Boosted Atazanavir
+4,Boosted Darunavir,23,"Simvastatin, lovastatin","et al. 2013]  • Simvastatin and lovastatin are substrates for CYP3A4, CYP2D6,",,Boosted Darunavir
+4,Boosted Darunavir,23,increases concentrations.,"• COBI inhibits CYP3A4, CYP2D6, OATP1B1, and P -gP. • Concomitant use is contraindicated due to potential for",,Boosted Darunavir
+4,Boosted Darunavir,23,"myopathy, including rhabdomyolysis.",,• Consider us,Boosted Darunavir
+4,Boosted Darunavir,24,fibrillation: No dose adjustments are necessary.,,‒ For patients with DVT and PE: Administer edoxaban 30 mg,Boosted Darunavir
+4,Boosted Darunavir,24,once daily.,,"• Rivaroxaban:  Do not coadminister. • Warfarin:  Use cautiously with warfarin; if use is necessary,",Boosted Darunavir
+4,Boosted Darunavir,24,increase INR monitoring.,,"‒ If INR increases, decrease warfarin dose.",Boosted Darunavir
+4,Boosted Darunavir,25,Calcium channel blockers,,"(CCBs)  Boosted PIs may increase CCB concentrations by as much as 50%.  When using with boosted PIs, decrease original CCB dose by as",Boosted Darunavir
+4,Boosted Darunavir,25,Eplerenone,[Keating and Plosker 2004]  DRV inhibits hepatic CYP3A4 isoenzyme and can increase serum,,Boosted Darunavir
+4,Boosted Darunavir,26,Class or Drug  Mechanism of Action  Clinical Comments,,"• Prednisolone, prednisone (systemic):  Concomitant use is",Boosted Darunavir
+4,Boosted Darunavir,26,"cannot be avoided, use for shortest effective duration.",,"• Betamethasone, triamcinolone (injectable): Concomitant use",Boosted Darunavir
+4,Boosted Darunavir,26,is contraindicated unless benefits outweigh risk.,,• Dexamethasone (systemic):  Concomitant use is,Boosted Darunavir
+4,Boosted Darunavir,27,recommendations and clinical comments [DHHS(c) 2024] .,,• Clozapine:  Monitor carefully for clozapine- related adverse,Boosted Darunavir
+4,Boosted Darunavir,27,HCV PIs (“ -previr” drugs),"[Soriano, et al. 2017]  Inhibition of CYP3A4, P -gP, and OATP1B1 by boosted PIs may",,Boosted Darunavir
+4,Boosted Darunavir,28,Class or Drug  Mechanism of Action  Clinical Comments,"Tramadol Tramadol exposure is increased with CYP3A inhibition, but this",,Boosted Darunavir
+4,Boosted Darunavir,28,reduces conversion to more potent active metabolite seen when,"tramadol is metabolized by CYP2D6.  When tramadol is given with COBI or RTV, monitoring for",,Boosted Darunavir
+4,Boosted Darunavir,29,COVID -19 therapeutics  • Molnupiravir and monoclonal antibodies  do not affect,"CYP450, P -gP, or other drug metabolism transporters. • Nirmatrelvir/RTV: Inhibition of CYP3A4, P -gP, and other",,Boosted Darunavir
+5,Bictegravir,30,antacids at least 6 hours before or 2 hours after BIC.,,‒ Administer BIC and antacids together with food. ‒ Do not coadminister BIC simultaneously with antacids on,Bictegravir
+11,Rilpivirine,31,phenytoin  Coadministration may significantly reduce CAB concentrations,"through induction of CYP450, UGT1A, and/or P -gP system.  Concomitant use is contraindicated.",,Rilpivirine
+11,Rilpivirine,31,"Rifabutin, rifampin, rifapentine  Coadministration may significantly reduce CAB concentrations","through induction of CYP450, UGT1A, and/or P -gP system.  • Rifampin, rifapentine:  Concomitant use is contrai",,Rilpivirine
+8,Boosted Elvitegravir,33,for benign prostatic,hyperplasia  COBI -boosted EVG inhibits CYP3A4 and other transporters and is,,Boosted Elvitegravir
+8,Boosted Elvitegravir,34,clopidogrel,2014]  • Cilostazol  may be metabolized by CYP3A; COBI -boosted EVG,,Boosted Elvitegravir
+8,Boosted Elvitegravir,34,can increase concentrations of this drug.,• Ticagrelor:  Strong CYP3A4 inhibitors may increase ticagrelor,,Boosted Elvitegravir
+8,Boosted Elvitegravir,35,Rosuvastatin,"[Custodio, et al. 2014]  • Rosuvastatin is a substrate of OATP1B1, OATP1B3, and CYP2C9. • COBI inhibits OATP. • EVG induces CYP2C9.",• Boosted EVG may moderately increase concentrations.  Use lowest effective dose of rosuvastatin and titrate carefully to achieve clinical effect; monitor for adverse effects.,Boosted Elvitegravir
+8,Boosted Elvitegravir,36,diazepam Boosting with cobicistat may increase benzodiazepine,"concentrations via CYP3A4 inhibition.  Consider alternative benzodiazepine (e.g., lorazepam, oxazepam,",,Boosted Elvitegravir
+8,Boosted Elvitegravir,37,Class or Drug  Mechanism of Action  Clinical Comments,Eletriptan Eletriptan is a CYP3A substrate and concentrations may be,,Boosted Elvitegravir
+8,Boosted Elvitegravir,38,"ADHD medications  • Methylphenidate, amphetamine, dextroamphetamine:",CYP2D6 inhibition may increase drug concentrations with,,Boosted Elvitegravir
+8,Boosted Elvitegravir,38,concurrent RTV use. Less effect found with COBI.,• Modafinil:  CYP3A4 induction may reduce EVG and COBI l,,Boosted Elvitegravir
+9,Raltegravir,39,"daily, no dose adjustments are necessary.","Abbreviations:  CYP, cytochrome P450; UGT, uridine diphosphate glucuronosyltransferase.",‒ Do not coadminister RAL with once -daily rifapentine.,Raltegravir
+10,Doravirine,39,Strong inducers or inhibitors of,"CYP3A [Deeks 2018]  DOR is a CYP3A substrate, and as such, drugs that affect its",,Doravirine
+10,Doravirine,39,metabolism affect its concentrations.  • Avoid concomitant use if possible.,,• Dose adjustments of DOR are not recommended. • Consider alternative concomitant agents.,Doravirine
+10,Doravirine,40,"a. No data are currently available on effects related to concurrent use of tecovirimat and HIV medications. However, midazolam AUC was reduced by 32% with concomitant tecovirimat","use, and some experts recommend caution due to the mild CYP3A4 induction associated with tecovirimat. Among them is University of Liverpool HIV Drug Interactions , which makes the",,Doravirine
+6,Cabotegravir,40,Proton pump inhibitors (PPIs),"[Schafer and Short 2012]  • PPIs inhibit gastric acid secretion by proton pumps, thereby",,Cabotegravir
+6,Cabotegravir,40,increasing gastric pH.,,• Oral RPV requires acidic environment for optimal absorption.  • Concurrent use of PPIs wit,Cabotegravir
+6,Cabotegravir,41,"QT interval, especially at high doses.  • No dose adjustments are necessary.",,• Do not use more LABA than recommended; this can increase,Cabotegravir
+12,Efavirenz,42,monitoring.,,"• If INR increases, decrease warfarin dose. • If INR decreases, increase warfarin dose slowly.",Efavirenz
+12,Efavirenz,42,Bupropion,"[Robertson, et al. 2008]  EFV induces bupropion metabolism.  Monitor for clinical effect and increase as neede",,Efavirenz
+12,Efavirenz,44,Class or Drug  Mechanism of Action  Clinical Comments,,"• Norethindrone, drospirenone, etonogestrel: Consider",Efavirenz
+12,Efavirenz,44,ARV.,,• Ulipristal: Monitor closely for reduced efficacy.,Efavirenz
+12,Efavirenz,45,COVID -19 therapeutics  • Molnupiravir and monoclonal antibodies  do not affect,"CYP450, P -gP, or other drug metabolism transporters. • Nirmatrelvir/RTV: Inhibition of CYP3A4, P -gP, and other",,Efavirenz
+13,Etravirine,46,and Liedtke 2010]  • Cilostazol:  ETR may reduce cilostazol concentrations.,"• Dipyridamole:  ETR may induce UGT enzymes, which are",,Etravirine
+13,Etravirine,46,and conversion of clopidogrel to its active metabolite.,,"• Vorapaxar:  When coadministered with ETR,",Etravirine
+13,Etravirine,47,additional contraceptive methods or alternative ARV.,,• Ulipristal: Monitor closely for re,Etravirine
+13,Etravirine,48,Dolutegravir (DTG),"[Green, et al. 2017]  • ETR induces UGT1A1 and CYP3A enzymes. • DTG is a substrate of UGT1A1 and CYP3A enzymes.  ETR reduces DTG concentrations. Do not use concomitantly",,Etravirine
+13,Etravirine,48,unless boosted PI is also part of treatment regimen.,Lenacapavir (LEN)  CYP3A4 and P -gP induction associated with concomitant HIV,,Etravirine
+14,Abacavir,49,Alcohol,"[Yuen, et al. 2008; McDowell, et al. 2000]  ABC is metabolized via alcohol dehydrogenase, and competitive",,Abacavir
+15,Tenofovir Disoproxil Fumarate,49,elimination as well as overlapping adverse effect profiles.,• Competitive inhibition of elimination results in additive,,Tenofovir
+15,Tenofovir Disoproxil Fumarate,50,Class or Drug  Mechanism of Action  Clinical Comments,Potent CYP3A4 or P -gP,,Tenofovir
+15,Tenofovir Disoproxil Fumarate,50,"wort, etc.)","[Gibson, et al. 2016]  • CYP3A4 is a minor metabolic pathway for TAF, and as such, potent inducers of this enzyme may modestly reduce",,Tenofovir
+15,Tenofovir Disoproxil Fumarate,50,concentrations.,"• TAF is also a P- gP substrate, and inducers may decrease TAF",,Tenofovir
+17,Fostemsavir,51,Class or Drug  Mechanism of Action  Clinical Comments,Potent CYP3A4 or P -gP,,Fostemsavir
+17,Fostemsavir,51,"carbamazepine, St. John’s","wort, etc.)  CYP3A4 induction reduces FTR levels.  Do not coadminister.",,Fostemsavir
+17,Fostemsavir,51,Antineoplastic agent,(mitotane)  CYP3A4 induction reduces FTR levels.  Do not coadminister.,,Fostemsavir
+17,Fostemsavir,51,Androgen receptor inhibitor,(enzalutamide)  CYP3A4 induction reduces FTR levels.  Do not coadminister.,,Fostemsavir
+17,Fostemsavir,52,drug is necessary.,"Abbreviations:  CYP, cytochrome P450; GI, gastrointestinal; HCV, hepatitis C virus; LFT, liver function test; OATP, organic anion transporting polypeptide; P -gP, P -glycoprotein; RTV,",,Fostemsavir
+18,Maraviroc,52,Class or Drug  Mechanism of Action  Clinical Comments,Potent CYP3A4 or P -gP inducers (St. John’s wort)  Reduced MVC levels are due to CYP3A4 induction.  Do not coadminister.,,Maraviroc
+18,Maraviroc,52,COVID -19 therapeutics  • Molnupiravir and monoclonal antibodies  do not affect,"CYP450, P -gP, or other drug metabolism transporters. • Nirmatrelvir/RTV: Inhibition of CYP3A4, P -gP, and other",,Maraviroc
+19A,Lenacapavir,57,b. For individuals using subcutaneous LEN every 6 months for HIV prevention. No guidance is currently available for (1) individuals using weekly oral LEN for HIV prevention or (2) initiating,subcutaneous LEN in individuals already using strong or moderate CYP3A4 inducers.,,Lenacapavir
+30,Inhaled and Injected Corticosteroids,73,Class or Drug  Mechanism of Action  Clinical Comments,,• Fostemsavir (FTR) No significant interactions reported.  No dose adjustments are necessary.,Inhaled and Injected Corticosteroids
+30,Inhaled and Injected Corticosteroids,75,Class or Drug  Mechanism of Action  Clinical Comments,"• After stopping use of moderate  CYP3A4 inducer, continue to",,Inhaled and Injected Corticosteroids
+30,Inhaled and Injected Corticosteroids,75,continues until the patient has stopped the inducer.,"Abbreviations:  ARV, antiretroviral; CYP, cytochrome P450; NRTI, nucleoside reverse transcriptase inhi",,Inhaled and Injected Corticosteroids
+31,Antidepressants,75,inhibitors (MAOIs),"→ Including selective serotonin reuptake inhibitors (SSRIs), serotonin and norepinephrine reuptake inhibitors (SNRIs), trazodone, bupropion, and monoamine oxidase",,Antidepressants
+31,Antidepressants,75,Class or Drug  Mechanism of Action  Clinical Comments,,• Doravirine (DOR)  No significant interactions reported.  No dose adjustments are necessary.,Antidepressants
+32,Benzodiazepines [a],76,Class or Drug  Mechanism of Action  Clinical Comments,,• Fostemsavir (FTR) No significant interactions reported.  No dose adjustments are necessary.,Benzodiazepines [a]
+32,Benzodiazepines [a],76,"Elvitegravir (EVG), boosted  • Boosting with cobicistat:  May increase benzodiazepine",concentrations via CYP3A4 inhibition.,,Benzodiazepines [a]
+33,Sleep Medications,77,Class or Drug  Mechanism of Action  Clinical Comments,"Elvitegravir (EVG), boosted  • Suvorexant is a CYP3A substrate. • COBI inhibits CYP3A.",• Fostemsavir (FTR) No significant interactions reported.  No dose adjustments are necessary.,Sleep Medications
+34,Antipsychotics [a],78,Class or Drug  Mechanism of Action  Clinical Comments,"Elvitegravir (EVG), boosted  Several antipsychotic agents are substrates of CYP3A, and",• Doravirine (DOR)  No significant interactions are expected.  No dose adjustments are necessary.,Antipsychotics [a]
+35,Anticonvulsants [a],80,Tenofovir disoproxil fumarate,,"• Topiramate:  No significant interactions reported.  • Zonisamide:  When using with TDF, monitor for adverse effects. • Topiramate: When using with TDF, monitor renal func",Anticonvulsants [a]
+35,Anticonvulsants [a],81,Coadministration may significantly reduce concentrations of ARVs,"through induction of CYP450 system.  Carbamazepine, oxcarbazepine, phenobarbital, phenytoin:",,Anticonvulsants [a]
+36,Nonopioid Pain Medications,83,Class or Drug  Mechanism of Action  Clinical Comments,,• Fostemsavir (FTR) No significant interactions are expected.  No dose adjustments are necessary.,Nonopioid Pain Medications
+37,Opioid Analgesics and Tramadol,84,Class or Drug  Mechanism of Action  Clinical Comments,,• Fostemsavir (FTR) No significant interactions reported.  No dose adjustments are required.,Opioid Analgesics and Tramadol
+38,Hormonal Contraceptives,85,Class or Drug  Mechanism of Action  Clinical Comments,,• Doravirine (DOR)  No significant drug interactions reported.  No dose adjustments are necessary.,Hormonal Contraceptives
+38,Hormonal Contraceptives,86,levonorgestrel implants.,,"• Norethindrone, drospirenone, etonogestrel: Consider",Hormonal Contraceptives
+38,Hormonal Contraceptives,86,ARV.,,• Ulipristal: Monitor closely for reduced efficacy.,Hormonal Contraceptives
+39,Erectile and Sexual Dysfunction Agents,86,Class or Drug  Mechanism of Action  Clinical Comments,"Elvitegravir (EVG), boosted  PDE5 inhibitors:  PDE5 inhibitors are substrates of CYP3A.",• Doravirine (DOR)  No significant interactions reported.  No dose adjustments are necessary.,Erectile and Sexual Dysfunction Agents
+40,Alpha- Adrenergic Antagonists for Benign Prostatic Hyperplasia,88,Class or Drug  Mechanism of Action  Clinical Comments,,• Maraviroc (MVC)  No significant interactions reported.  No dose adjustments are necessary.,Alpha- Adrenergic Antagonists for Benign Prostatic Hyperplasia
+41,Tobacco and Smoking Cessation Products,88,Class or Drug  Mechanism of Action  Clinical Comments,,• Fostemsavir (FTR) No significant interactions reported.  No dose adjustments are necessary.,Tobacco and Smoking Cessation Products
+41,Tobacco and Smoking Cessation Products,89,Class or Drug  Mechanism of Action  Clinical Comments,• EFV (but not ETR) may increase bupropion metabolism.  • No dose adjustments are necessary.,"• Bupropion:  Monitor for clinical effect and increase as needed,",Tobacco and Smoking Cessation Products
+41,Tobacco and Smoking Cessation Products,89,but do not exceed recommended maximum dose.,"Abbreviations:  NRTI, nucleoside reverse transcriptase inhibitor; PI, protease inhibitor.",,Tobacco and Smoking Cessation Products
+42,"Alcohol, Disulfiram, and Acamprosate [a]",89,Class or Drug  Mechanism of Action  Clinical Comments,,• Fostemsavir (FTR) No significant interactions reported.  No dose adjustments are necessary.,"Alcohol, Disulfiram, and Acamprosate [a]"
+43,"Methadone, Buprenorphine",90,Class or Drug  Mechanism of Action  Clinical Comments,,"• Fostemsavir (FTR) BUP, methadone:  No significant interactions are expected. No dose adjustments are necessary.","Methadone, Buprenorphine"
+43,"Methadone, Buprenorphine",91,Class or Drug  Mechanism of Action  Clinical Comments,"Lenacapavir (LEN)  Methadone, BUP:  Moderate inhibition of CYP3A4 and P -gP",,"Methadone, Buprenorphine"
+43,"Methadone, Buprenorphine",91,lowest initial or maintenance dose.,,• Patients initiating LEN while already on MAT:  MAT dose,"Methadone, Buprenorphine"
+43,"Methadone, Buprenorphine",91,adjustments may be needed.,,• Monitor for excess sedation and/or respiratory,"Methadone, Buprenorphine"
+44,Immunosuppressants [a],91,Class or Drug  Mechanism of Action  Clinical Comments,,• Doravirine (DOR)  No significant interactions reported.  No dose adjustments are necessary.,Immunosuppressants [a]
+45,Rifamycins and Other Antituberculosis Medications,93,significantly reduce RPV concentrations through induction of,"CYP450, UGT1A, and/or P -gP systems.  • Rifabutin:",‒ Oral RPV : Increase RPV dose to 50  mg once daily [DHHS(a) ‒ Injectable RPV: Concomitant use is contr,Rifamycins and Other Antituberculosis Medications
+45,Rifamycins and Other Antituberculosis Medications,94,Raltegravir (RAL)  • Rifabutin:  No clinically significant interactions are expected.,• Rifampin:  CYP3A induction reduces RAL bioavailability. • Rifapentine:  Induction of metabolism may reduce RAL,,Rifamycins and Other Antituberculosis Medications
+45,Rifamycins and Other Antituberculosis Medications,94,metabolism.  • Rifabutin:  No dose adjustments are necessary.,,‒ When used concomita,Rifamycins and Other Antituberculosis Medications
+46,COVID -19 Therapeutics,95,Class or Drug  Mechanism of Action  Clinical Comments,,(also see prescribing information and emergency use authorizations [FDA(c) 2025; FDA(b) 2024] ) • Raltegravir (RAL)  No clinically significant interactions expected.  No dose adjustments are necessary.,COVID -19 Therapeutics
+47,Mpox Treatments,96,oral,,• Raltegravir (RAL)  No clinically significant interactions expected.  No dose adjustments are necessary.,Mpox Treatments
+47,Mpox Treatments,97,Fostemsavir (FTR) • Brincidofovir  is a substrate for OATP1B1 and OATP1B3.,• Tecovirimat is a weak inducer of CYP3A and a weak inhibitor of CYP2C8 and CYP2C19.  • Brincidofovir:  FTR inhibits OATP1B1 and may increase,,Mpox Treatments
+48,"Gender -Affirming Hormones [a] [Coleman, et al. 2022; Cirrincione, et al. 2020; Irving and Lehault 2017]",97,Class or Drug  Mechanism of Action  Clinical Comments,,• Lenacapavir (LEN)  No clinically significant interactions expected.  No dose adjustments are necessary.,"Gender -Affirming Hormones [a] [Coleman, et al. 2022; Cirrincione, et al. 2020; Irving and Lehault 2017]"
+48,"Gender -Affirming Hormones [a] [Coleman, et al. 2022; Cirrincione, et al. 2020; Irving and Lehault 2017]",98,Cobicistat (COBI)  • Estradiol: COBI -boosted PIs and EVG/COBI may increase,estradiol levels via CYP3A inhibition.,,"Gender -Affirming Hormones [a] [Coleman, et al. 2022; Cirrincione, et al. 2020; Irving and Lehault 2017]"
+48,"Gender -Affirming Hormones [a] [Coleman, et al. 2022; Cirrincione, et al. 2020; Irving and Lehault 2017]",99,Class or Drug  Mechanism of Action  Clinical Comments,Nevirapine  (NVP ) • Estradiol: NVP may reduce estradiol levels via CYP3A induction. dutasteride levels via CYP3A induction . progesterone): NVP may reduce progestin levels via CYP3A,,"Gender -Affirming Hormones [a] [Coleman, et al. 2022; Cirrincione, et al. 2020; Irving and Lehault 2017]"
+49,ADHD Medications and Lithium,100,Class or Drug  Mechanism of Action  Clinical Comments,,• Maraviroc (MVC)  No clinically significant interactions expected.  No dose adjustments are necessary.,ADHD Medications and Lithium
+49,ADHD Medications and Lithium,100,"Boosted PIs  • Methylphenidate, amphetamine, dextroamphetamine:",CYP2D6 inhibition may increase drug concentrations with,,ADHD Medications and Lithium
+49,ADHD Medications and Lithium,100,concurrent RTV use.,• Modafinil:  CYP3A4 induction may re,,ADHD Medications and Lithium

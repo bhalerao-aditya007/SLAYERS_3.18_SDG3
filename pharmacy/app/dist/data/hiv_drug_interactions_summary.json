@@ -1,0 +1,136 @@
+{
+  "drug_classes": {
+    "Integrase Strand Transfer Inhibitors (INSTIs)": {
+      "drugs": [
+        "Bictegravir (BIC)",
+        "Cabotegravir (CAB)",
+        "Dolutegravir (DTG)",
+        "Elvitegravir (EVG)",
+        "Raltegravir (RAL)"
+      ],
+      "description": "Block HIV integration into host DNA"
+    },
+    "Boosted Protease Inhibitors (PIs)": {
+      "drugs": [
+        "Atazanavir (ATV)",
+        "Darunavir (DRV)"
+      ],
+      "description": "Inhibit HIV protease enzyme, often boosted with COBI/RTV"
+    },
+    "Non-Nucleoside Reverse Transcriptase Inhibitors (NNRTIs)": {
+      "drugs": [
+        "Doravirine (DOR)",
+        "Rilpivirine (RPV)",
+        "Efavirenz (EFV)",
+        "Etravirine (ETR)",
+        "Nevirapine (NVP)"
+      ],
+      "description": "Bind to and alter reverse transcriptase"
+    },
+    "Nucleoside Reverse Transcriptase Inhibitors (NRTIs)": {
+      "drugs": [
+        "Abacavir (ABC)",
+        "Tenofovir (TDF/TAF)",
+        "Lamivudine (3TC)",
+        "Emtricitabine (FTC)"
+      ],
+      "description": "Competitive inhibitors of reverse transcriptase"
+    },
+    "Entry Inhibitors": {
+      "drugs": [
+        "Fostemsavir (FTR)",
+        "Maraviroc (MVC)"
+      ],
+      "description": "Block HIV entry into cells"
+    },
+    "Capsid Inhibitor": {
+      "drugs": [
+        "Lenacapavir (LEN)"
+      ],
+      "description": "Interfere with HIV capsid protein"
+    },
+    "Pharmacokinetic Enhancers": {
+      "drugs": [
+        "Cobicistat (COBI)",
+        "Ritonavir (RTV)"
+      ],
+      "description": "Boost levels of other ARVs by inhibiting metabolism"
+    }
+  },
+  "unique_drugs": [
+    "Raltegravir",
+    "Tenofovir",
+    "Boosted Atazanavir",
+    "Anticonvulsants [a]",
+    "Lenacapavir",
+    "Opioid Analgesics and Tramadol",
+    "Boosted Darunavir",
+    "Tobacco and Smoking Cessation Products",
+    "Alcohol, Disulfiram, and Acamprosate [a]",
+    "Antipsychotics [a]",
+    "Gender -Affirming Hormones [a] [Coleman, et al. 2022; Cirrincione, et al. 2020; Irving and Lehault 2017]",
+    "Efavirenz",
+    "Doravirine",
+    "Sleep Medications",
+    "Hormonal Contraceptives",
+    "COVID -19 Therapeutics",
+    "Inhaled and Injected Corticosteroids",
+    "Cabotegravir",
+    "Rifamycins and Other Antituberculosis Medications",
+    "Boosted Elvitegravir",
+    "Alpha- Adrenergic Antagonists for Benign Prostatic Hyperplasia",
+    "Mpox Treatments",
+    "Rilpivirine",
+    "Etravirine",
+    "Bictegravir",
+    "Maraviroc",
+    "Immunosuppressants [a]",
+    "Methadone, Buprenorphine",
+    "ADHD Medications and Lithium",
+    "Nonopioid Pain Medications",
+    "Antidepressants",
+    "Fostemsavir",
+    "Abacavir",
+    "Erectile and Sexual Dysfunction Agents",
+    "Benzodiazepines [a]"
+  ],
+  "interaction_counts": {
+    "Boosted Atazanavir": 13,
+    "Boosted Darunavir": 16,
+    "Bictegravir": 1,
+    "Rilpivirine": 2,
+    "Boosted Elvitegravir": 8,
+    "Raltegravir": 1,
+    "Doravirine": 3,
+    "Cabotegravir": 3,
+    "Efavirenz": 5,
+    "Etravirine": 5,
+    "Abacavir": 1,
+    "Tenofovir": 4,
+    "Fostemsavir": 5,
+    "Maraviroc": 2,
+    "Lenacapavir": 1,
+    "Inhaled and Injected Corticosteroids": 3,
+    "Antidepressants": 2,
+    "Benzodiazepines [a]": 2,
+    "Sleep Medications": 1,
+    "Antipsychotics [a]": 1,
+    "Anticonvulsants [a]": 2,
+    "Nonopioid Pain Medications": 1,
+    "Opioid Analgesics and Tramadol": 1,
+    "Hormonal Contraceptives": 3,
+    "Erectile and Sexual Dysfunction Agents": 1,
+    "Alpha- Adrenergic Antagonists for Benign Prostatic Hyperplasia": 1,
+    "Tobacco and Smoking Cessation Products": 3,
+    "Alcohol, Disulfiram, and Acamprosate [a]": 1,
+    "Methadone, Buprenorphine": 4,
+    "Immunosuppressants [a]": 1,
+    "Rifamycins and Other Antituberculosis Medications": 3,
+    "COVID -19 Therapeutics": 1,
+    "Mpox Treatments": 2,
+    "Gender -Affirming Hormones [a] [Coleman, et al. 2022; Cirrincione, et al. 2020; Irving and Lehault 2017]": 3,
+    "ADHD Medications and Lithium": 3
+  },
+  "total_interactions": 109,
+  "total_common_interactions": 26
+}
