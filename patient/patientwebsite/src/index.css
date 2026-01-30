@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Clean Medical Patient Interface Design System
+   High contrast, no gradients, professional medical aesthetic */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Clean white background */
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+
+    /* Cards - pure white for contrast */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Primary - Medical Teal */
+    --primary: 174 62% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Light neutral */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    /* Muted - Subtle grays */
+    --muted: 210 15% 94%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent - Soft blue */
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive - Clear red for errors */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Warning - Amber for alerts */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Success - Green for confirmations */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Info - Blue for information */
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 174 62% 38%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 174 62% 38%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 174 62% 38%;
+
+    /* Medical specific tokens */
+    --morning: 38 92% 50%;
+    --afternoon: 24 95% 53%;
+    --night: 222 47% 31%;
+    --before-food: 174 62% 38%;
+    --after-food: 262 52% 47%;
+  }
+
+  .dark {
+    --background: 222 47% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 174 62% 48%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 199 89% 48%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 222 47% 11%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 222 47% 11%;
+
+    --info: 199 89% 48%;
+    --info-foreground: 222 47% 11%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 174 62% 48%;
+
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 174 62% 48%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 174 62% 48%;
+
+    --morning: 38 92% 60%;
+    --afternoon: 24 95% 63%;
+    --night: 222 47% 61%;
+    --before-food: 174 62% 48%;
+    --after-food: 262 52% 57%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .card-medical {
+    @apply bg-card border border-border rounded-lg p-6 shadow-sm;
+  }
+
+  .stat-card {
+    @apply bg-card border border-border rounded-lg p-4;
+  }
+
+  .dosage-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .dosage-morning {
+    @apply bg-[hsl(var(--morning)/0.15)] text-[hsl(var(--morning))];
+  }
+
+  .dosage-afternoon {
+    @apply bg-[hsl(var(--afternoon)/0.15)] text-[hsl(var(--afternoon))];
+  }
+
+  .dosage-night {
+    @apply bg-[hsl(var(--night)/0.15)] text-[hsl(var(--night))];
+  }
+
+  .food-before {
+    @apply bg-[hsl(var(--before-food)/0.15)] text-[hsl(var(--before-food))];
+  }
+
+  .food-after {
+    @apply bg-[hsl(var(--after-food)/0.15)] text-[hsl(var(--after-food))];
+  }
+
+  .alert-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-[hsl(var(--warning)/0.15)] text-[hsl(var(--warning))];
+  }
+
+  .success-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-[hsl(var(--success)/0.15)] text-[hsl(var(--success))];
+  }
+}
