@@ -41,9 +41,6 @@ CAB-PrEP failure → No INSTIs
 eGFR <30 → TAF enforced
 Pregnancy → DTG prioritized
 HBV → Monotherapy banned
-
-**Full HHS 2025 implementation (Tables 3, 6a, 6b).**
-
 ---
 
 ## 💰 B2B Pharmacy Pricing
