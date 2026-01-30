@@ -81,7 +81,7 @@ Enterprise: Custom contracts
 ## 📈 Tech Stack
 
 **HTML5 + Three.js + XGBoost + N8N + Google APIs**  
-HIPAA | FDA | U=U compliant | Zero backend.
+HIPAA | FDA | U=U compliant
 
 ---
 
