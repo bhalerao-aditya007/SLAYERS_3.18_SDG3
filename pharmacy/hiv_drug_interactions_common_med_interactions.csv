@@ -1,0 +1,55 @@
+table_number,table_name,page,arv_drugs,interaction_details
+25,"Antidiabetic Medications  ................................ ................................ ................................ .............................  66 
+Table 26: Acid- Reducing Agents  ................................................................................................................................... 68 
+Table  27: Polyvalent Cations  ....................................................................................................................................... 70 
+Table 28: Asthma and Allergy Medications  .................................................................................................................. 72 
+Table 29: Long -Acting Beta Agonists  ............................................................................................................................ 72 
+Table 30: Inhaled and Injected Corticosteroids  ........................................................................................................... 73 
+Table 31: Antidepressants  ............................................................................................................................................ 75 
+Table 32: Benzodiazepines  ........................................................................................................................................... 76 
+Table 33: Sleep Medications  ........................................................................................................................................ 77 
+Table 34: Antipsychotics  .............................................................................................................................................. 78 
+Table 35: Anticonvulsants  ............................................................................................................................................ 80 
+Table 36: Nonopioid Pain Medications  ........................................................................................................................ 83 
+Table 37: Opioid Analgesics and Tramadol  .................................................................................................................. 84 
+Table 38: Hormonal Contraceptives  ............................................................................................................................. 85 
+Table 39: Erectile and Sexual Dysfunction Agents  ....................................................................................................... 86 
+Table 40: Alpha -Adrenergic Antagonists for Benign Prostatic Hyperplasia  ................................................................. 88 
+Table 41: Tobacco and Smoking Cessation Products  ................................................................................................... 88 
+Table 42: Alcohol, Disulfiram, and Acamprosate  ......................................................................................................... 89 
+Table 43: Methadone, Buprenorphine, Naloxone, and Naltrexone  ............................................................................. 90 
+Table 44: Immunosuppressants  ................................................................................................................................... 91 
+Table 45: Rifamycins and Other Antituberculosis Medications  ...................................................................................  92 
+Table 46: COVID- 19 Therapeutics  ................................................................................................................................ 95 
+Table 47: Mpox Treatments  ......................................................................................................................................... 96 
+Table 48: Gender -Affirming Hormones ........................................................................................................................ 97 
+Table 49: ADHD Medications and Lithium  ................................................................................................................. 100 
+References  ............................................................................................................................................................................. 101 
+Supplement: Guideline Development and Recommendation Ratings  ................................ ................................ ..................  108 
+Purpose of This Resource 
+The New York State Department of Health",3,antiretroviral (ARV) medications to accomplish the following:, • Provide a central source of information on drug- drug interactions involving ARV medications • Assist healthcare providers in preventing or managing drug -drug interactions that could have a negative or dangerous effect on patient health • Balance the risks and benefits of reported drug- drug interactions to identify those that should or must
+21,Antihypertensive Medications,59,"→ Angiotensin -converting enzyme (ACE) inhibitors [a], angiotensin II receptor blockers (ARBs), calcium channel blockers (CCBs), beta blockers, direct renin inhibitors,", diuretics Class or Drug  Mechanism of Action  Clinical Comments
+21,Antihypertensive Medications,59,• Fostemsavir (FTR) No significant interactions are expected.  No dose adjustments are necessary., • Dolut
+21,Antihypertensive Medications,60,"→ Angiotensin -converting enzyme (ACE) inhibitors [a], angiotensin II receptor blockers (ARBs), calcium channel blockers (CCBs), beta blockers, direct renin inhibitors,"," diuretics Class or Drug  Mechanism of Action  Clinical Comments • ACE inhibitors, ARBs, CCBs, aliskiren, diuretics:  No dose adjustments are necessary."
+21,Antihypertensive Medications,60,"Elvitegravir (EVG), boosted  • Aliskiren:  P-gP inhibitors, including boosted EVG, decrease"," aliskiren elimination, increasing adverse"
+21,Antihypertensive Medications,61,"→ Angiotensin -converting enzyme (ACE) inhibitors [a], angiotensin II receptor blockers (ARBs), calcium channel blockers (CCBs), beta blockers, direct renin inhibitors,"," diuretics Class or Drug  Mechanism of Action  Clinical Comments Note: a. Although not typically nephrotoxic, ACE inhibitors can, rarely, contribute to renal dysfunction, particularly when combined w ith high -dose NSAIDs. Clinicians are advised to ask patients who are taking TDF about"
+22,Anticoagulants,61,"Elvitegravir (EVG), boosted  • Warfarin:  Metabolism of warfarin could potentially decrease", (o
+22,Anticoagulants,62,Boosted PIs  • Warfarin:  Metabolism of warfarin could potentially decrease," (or more rarely) increase. • Rivaroxaban, dabigatran, apixaban:  Concentrations may increase, increasing bleeding ri"
+23,Antiplatelet Medications,63,"Elvitegravir (EVG), boosted  • Cilostazol  may be metabolized by CYP3A; COBI -boosted EVG", can increase concentratio
+23,Antiplatelet Medications,64,• Etravirine (ETR)  • Cilostazol:  EFV and ETR may reduce cilostazol concentrations.," • Dipyridamole:  EFV and ETR may induce UGT enzymes, which are responsible for metabolism. • Ticagrelor, clopidogrel:  EFV and ETR reduce ticagrelor concentrations and conversion of clopidogrel to its active metabolite. • Vor"
+24,Statins,64,"Elvitegravir (EVG), boosted  • Simvastatin, lovastatin:  Boosted EVG greatly increases"," concentrations. • Atorvastatin, rosuvastatin:  Boosted EVG may moderately increase concentration"
+24,Statins,65,"Atazanavir (ATV), boosted  • Simvastatin, lovastatin:  Boosted ATV greatly increases"," concentrations. • Atorvastatin, rosuvastatin:  Boosted ATV may moderately increase concentrations. • Fluvastatin:  Interaction has not been studied, but potential for moderate increase is possible. • Pitavastatin, pravastatin:  Although moderate increases are possible, low doses are considered safe when used with"
+24,Statins,66,"• Etravirine (ETR)  • Simvastatin, lovastatin:  EFV and ETR may decrease"," concentrations. • Atorvastatin, pravastatin, fluvastatin:  EFV and ETR may modestly reduce concentrations. • Pitavastatin, rosuvastatin:  No significant interactions are expected.  • Simvastatin, lovastatin:  Monitor for efficacy. May warrant increases in statin dose. Do not increase dose above maximum"
+25,Antidiabetic Medications,66,• Fostemsavir (FTR) No significant interactions are expected.  No dose adjustments are necessary., • Dol
+25,Antidiabetic Medications,67,"Elvitegravir (EVG), boosted  • Metformin:  COBI is known to inhibit MATE1, which is involved"," in metformin elimination, thus increasing metformin concentrations. • Glyburide  is mainl"
+26,Acid -Reducing Agents,68,"→ Proton pump inhibitors (PPIs), histamine -2 receptor agonists (H2RAs)", Class or Drug  Mechanism of Action  Clinical Comments
+26,Acid -Reducing Agents,69,"→ Proton pump inhibitors (PPIs), histamine -2 receptor agonists (H2RAs)"," Class or Drug  Mechanism of Action  Clinical Comments • Do not exceed dose equivalent to famotidine 20  mg of any H2RA. Total daily dose should not exceed 40  mg famotidine or equivalent, e.g., nizatidine 150 mg (300  mg daily)."
+26,Acid -Reducing Agents,69,"Atazanavir (ATV), boosted  • ATV requires acidic gastric pH for absorption, and acid-", reducing agents interfere with ATV absorption.
+26,Acid -Reducing Agents,70,"→ Proton pump inhibitors (PPIs), histamine -2 receptor agonists (H2RAs)", Class or Drug  Mechanism of Action  Clinical Comments
+26,Acid -Reducing Agents,70,"Rilpivirine (RPV)  • PPIs and H2RAs inhibit gastric acid secretion by proton pumps,", thereby increasing gastric pH. • Oral RPV requires acidic environment for optimal absorption.
+27,Polyvalent Cations,70,• Fostemsavir (FTR) No clinically significant interactions reported., No dose adjustments are necessary.
+27,Polyvalent Cations,70,"All INSTIs  INSTIs form complexes with cations, resulting in reduced", concentrations o
+27,Polyvalent Cations,71,"Bictegravir (BIC)  BIC can chelate with cations, reducing absorption of both drugs.  • Aluminum/magnesium -containing antacids:  Administer at", least 6 hours before or 2 hours after BIC. • Calcium- containing  antacids: ‒ Administer BIC and antacids together with food. ‒ Do not coadminister BIC simult
+28,Asthma and Allergy Medications,72,• Doravirine (DOR)  No significant interactions reported.  No dose adjustments are necessary., Abbreviat
+29,Long -Acting Beta Agonists,72,"Elvitegravir (EVG), boosted  CYP3A inhibition increases plasma concentrations of these", agents. • Concomitant use is contraindicat
+29,Long -Acting Beta Agonists,73,Rilpivirine (RPV)  RPV and drugs from LABA class may both theoretically increase," QT interval, especially at high doses.  • No dose adjustments are necessary. • Do not use more LABA than recommended; this can increase risk of QT prolongation."
