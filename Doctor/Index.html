@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIV Clinical Decision Support System | HHS Guidelines 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 5px solid #e74c3c;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            min-height: calc(100vh - 200px);
+        }
+        
+        .sidebar {
+            background: #f8f9fa;
+            padding: 25px;
+            border-right: 2px solid #dee2e6;
+            overflow-y: auto;
+            max-height: 90vh;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background: #229954;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .btn.secondary {
+            background: #3498db;
+            margin-top: 10px;
+        }
+        
+        .content-area {
+            padding: 30px;
+            overflow-y: auto;
+            max-height: 90vh;
+            background: #fff;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-left: 4px solid #3498db;
+        }
+        
+        .card.warning {
+            border-left-color: #e74c3c;
+            background: #fdf2f2;
+        }
+        
+        .card.success {
+            border-left-color: #27ae60;
+            background: #f2fdf5;
+        }
+        
+        .card.gold {
+            border-left-color: #f39c12;
+            background: #fffbf2;
+        }
+        
+        .card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .icon {
+            font-size: 1.2em;
+        }
+        
+        .recommendation {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border-left: 3px solid #3498db;
+        }
+        
+        .recommendation strong {
+            color: #2980b9;
+        }
+        
+        .alert-box {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            color: #856404;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        
+        .critical {
+            background: #f8d7da;
+            border-color: #dc3545;
+            color: #721c24;
+        }
+        
+        .table-responsive {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9em;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background: #2c3e50;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: #f5f5f5;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: #ecf0f1;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 10px 0;
+            position: relative;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #27ae60 0%, #2ecc71 100%);
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .progress-fill.low {
+            background: linear-gradient(90deg, #e74c3c 0%, #c0392b 100%);
+        }
+        
+        .progress-fill.medium {
+            background: linear-gradient(90deg, #f39c12 0%, #e67e22 100%);
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .metric-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+        }
+        
+        .metric-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2c3e50;
+            display: block;
+        }
+        
+        .metric-label {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin: 20px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #3498db;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            background: #3498db;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        
+        .badge-primary { background: #3498db; color: white; }
+        .badge-success { background: #27ae60; color: white; }
+        .badge-warning { background: #f39c12; color: white; }
+        .badge-danger { background: #e74c3c; color: white; }
+        
+        @media (max-width: 968px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                max-height: none;
+                border-right: none;
+                border-bottom: 2px solid #dee2e6;
+            }
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        #printBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            font-weight: 600;
+            z-index: 1000;
+        }
+        
+        .regimen-box {
+            background: #e8f8f5;
+            border: 2px solid #27ae60;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .regimen-title {
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🩺 HIV Clinical Decision Support System</h1>
+            <p>Based on HHS Guidelines for the Use of Antiretroviral Agents in Adults and Adolescents with HIV (2025)</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="sidebar">
+                <h3 style="margin-bottom: 20px; color: #2c3e50;">Patient Data Entry</h3>
+                
+                <div class="form-group">
+                    <label>Date of Assessment</label>
+                    <input type="date" id="assessDate" value="">
+                </div>
+                
+                <div class="form-group">
+                    <label>Patient ID</label>
+                    <input type="text" id="patientId" placeholder="Enter patient identifier">
+                </div>
+                
+                <div class="form-group">
+                    <label>Age</label>
+                    <input type="number" id="age" placeholder="Years">
+                </div>
+                
+                <div class="form-group">
+                    <label>CD4 Count (cells/mm³)</label>
+                    <input type="number" id="cd4Count" placeholder="e.g., 350">
+                </div>
+                
+                <div class="form-group">
+                    <label>HIV Viral Load (copies/mL)</label>
+                    <input type="number" id="viralLoad" placeholder="e.g., 50000">
+                </div>
+                
+                <div class="form-group">
+                    <label>HLA-B*5701 Status</label>
+                    <select id="hlaStatus">
+                        <option value="unknown">Unknown</option>
+                        <option value="negative">Negative</option>
+                        <option value="positive">Positive</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>HBV Co-infection</label>
+                    <select id="hbvStatus">
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                        <option value="unknown">Unknown</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Pregnancy Status</label>
+                    <select id="pregnancyStatus">
+                        <option value="no">Not Pregnant</option>
+                        <option value="pregnant">Pregnant</option>
+                        <option value="planning">Planning Pregnancy</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Prior PrEP Exposure</label>
+                    <select id="prepHistory">
+                        <option value="none">None</option>
+                        <option value="oral">Oral (TDF/FTC or TAF/FTC)</option>
+                        <option value="cab">Long-acting CAB</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Renal Function (eGFR mL/min)</label>
+                    <input type="number" id="egfr" placeholder="e.g., 90">
+                </div>
+                
+                <div class="form-group">
+                    <label>Opportunistic Infections</label>
+                    <select id="oiStatus">
+                        <option value="none">None</option>
+                        <option value="mild">Mild (non-AIDS defining)</option>
+                        <option value="aids">AIDS-defining condition</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>ART Naive</label>
+                    <select id="artNaive">
+                        <option value="yes">Yes (Never on ART)</option>
+                        <option value="no">Experienced</option>
+                    </select>
+                </div>
+                
+                <button class="btn" onclick="analyzePatient()">Analyze & Generate Plan</button>
+                <button class="btn secondary" onclick="clearData()">Clear Data</button>
+            </div>
+            
+            <div class="content-area" id="resultsArea">
+                <div class="card">
+                    <h3><span class="icon">ℹ️</span> Welcome to HIV Decision Support</h3>
+                    <p>Enter patient information in the sidebar and click "Analyze & Generate Plan" to receive:</p>
+                    <ul style="margin: 15px 0; padding-left: 20px; line-height: 1.8;">
+                        <li>Personalized ART regimen recommendations (Table 6a/6b)</li>
+                        <li>Prognosis and life expectancy estimates</li>
+                        <li>Monitoring schedule (Table 3)</li>
+                        <li>Drug resistance testing guidance</li>
+                        <li>Special population considerations</li>
+                    </ul>
+                    <div class="alert-box">
+                        <strong>Clinical Disclaimer:</strong> This tool is for decision support only. Final clinical decisions must be made by the treating physician considering all patient factors.
+                    </div>
+                </div>
+                
+                <div id="outputContent"></div>
+            </div>
+        </div>
+    </div>
+    
+    <button id="printBtn" onclick="window.print()">📄 Print Report</button>
+
+    <script>
+        // Set today's date
+        document.getElementById('assessDate').valueAsDate = new Date();
+        
+        // Local storage for persistence
+        function saveData() {
+            const data = {
+                patientId: document.getElementById('patientId').value,
+                age: document.getElementById('age').value,
+                cd4: document.getElementById('cd4Count').value,
+                viralLoad: document.getElementById('viralLoad').value,
+                hla: document.getElementById('hlaStatus').value,
+                hbv: document.getElementById('hbvStatus').value,
+                pregnancy: document.getElementById('pregnancyStatus').value,
+                prep: document.getElementById('prepHistory').value,
+                egfr: document.getElementById('egfr').value,
+                oi: document.getElementById('oiStatus').value,
+                artNaive: document.getElementById('artNaive').value
+            };
+            localStorage.setItem('hivPatientData', JSON.stringify(data));
+        }
+        
+        function loadData() {
+            const saved = localStorage.getItem('hivPatientData');
+            if (saved) {
+                const data = JSON.parse(saved);
+                document.getElementById('patientId').value = data.patientId || '';
+                document.getElementById('age').value = data.age || '';
+                document.getElementById('cd4Count').value = data.cd4 || '';
+                document.getElementById('viralLoad').value = data.viralLoad || '';
+                document.getElementById('hlaStatus').value = data.hla || 'unknown';
+                document.getElementById('hbvStatus').value = data.hbv || 'no';
+                document.getElementById('pregnancyStatus').value = data.pregnancy || 'no';
+                document.getElementById('prepHistory').value = data.prep || 'none';
+                document.getElementById('egfr').value = data.egfr || '';
+                document.getElementById('oiStatus').value = data.oi || 'none';
+                document.getElementById('artNaive').value = data.artNaive || 'yes';
+            }
+        }
+        
+        function clearData() {
+            localStorage.removeItem('hivPatientData');
+            location.reload();
+        }
+        
+        // Load saved data on startup
+        loadData();
+        
+        function analyzePatient() {
+            saveData();
+            
+            const cd4 = parseInt(document.getElementById('cd4Count').value) || 0;
+            const viralLoad = parseInt(document.getElementById('viralLoad').value) || 0;
+            const hla = document.getElementById('hlaStatus').value;
+            const hbv = document.getElementById('hbvStatus').value;
+            const pregnancy = document.getElementById('pregnancyStatus').value;
+            const prep = document.getElementById('prepHistory').value;
+            const egfr = parseInt(document.getElementById('egfr').value) || 90;
+            const oi = document.getElementById('oiStatus').value;
+            const artNaive = document.getElementById('artNaive').value;
+            const age = parseInt(document.getElementById('age').value) || 35;
+            
+            let html = '';
+            
+            // URGENCY LEVEL
+            let urgency = 'low';
+            if (cd4 < 200 || oi === 'aids') urgency = 'critical';
+            else if (cd4 < 350 || viralLoad > 100000 || oi === 'mild') urgency = 'high';
+            
+            html += `
+                <div class="card ${urgency === 'critical' ? 'warning' : urgency === 'high' ? 'gold' : 'success'}">
+                    <h3><span class="icon">⚠️</span> Clinical Priority Level: ${urgency.toUpperCase()}</h3>
+                    <p><strong>Recommendation:</strong> ${getUrgencyText(urgency, cd4, oi)}</p>
+                    ${cd4 < 200 ? '<div class="alert-box critical">CD4 <200: Consider PCP prophylaxis (TMP-SMX) and urgent ART initiation</div>' : ''}
+                </div>
+            `;
+            
+            // PROGNOSIS CALCULATOR
+            const prognosis = calculatePrognosis(cd4, viralLoad, age, egfr, oi, urgency);
+            html += `
+                <div class="card">
+                    <h3><span class="icon">📊</span> Prognosis & Life Expectancy Analysis</h3>
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <span class="metric-value">${prognosis.years}</span>
+                            <div class="metric-label">Estimated Life Expectancy (Years)</div>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-value">${prognosis.suppressionTime}</span>
+                            <div class="metric-label">Time to Viral Suppression</div>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-value">${prognosis.cvdRisk}</span>
+                            <div class="metric-label">10-Year CVD Risk Category</div>
+                        </div>
+                    </div>
+                    
+                    <h4 style="margin: 20px 0 10px 0;">Survival Probability (Based on START/TEMPRANO Trials)</h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill ${prognosis.survivalColor}" style="width: ${prognosis.survivalRate}%">
+                            ${prognosis.survivalRate}% 5-Year Survival
+                        </div>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
+                        *With effective ART, life expectancy approaches that of HIV-negative population (START Study, NEJM 2015)
+                    </p>
+                    
+                    <div class="alert-box ${cd4 < 350 ? 'critical' : ''}" style="margin-top: 15px;">
+                        <strong>Risk Stratification:</strong> ${prognosis.riskText}
+                    </div>
+                </div>
+            `;
+            
+            // ART REGIMEN RECOMMENDATIONS
+            html += generateRegimenRecommendations(cd4, viralLoad, hla, hbv, pregnancy, prep, egfr, artNaive);
+            
+            // MONITORING SCHEDULE
+            html += generateMonitoringSchedule(cd4, viralLoad, hbv, pregnancy);
+            
+            // RESISTANCE TESTING
+            html += `
+                <div class="card">
+                    <h3><span class="icon">🧬</span> Drug Resistance Testing (Per HHS Guidelines)</h3>
+                    ${generateResistanceGuidance(prep, artNaive, viralLoad)}
+                </div>
+            `;
+            
+            // SPECIAL CONSIDERATIONS
+            html += generateSpecialConsiderations(hbv, pregnancy, egfr, cd4);
+            
+            document.getElementById('outputContent').innerHTML = html;
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+        
+        function getUrgencyText(level, cd4, oi) {
+            if (level === 'critical') return 'Initiate ART immediately (same day if possible). Hospitalize if AIDS-defining OI present.';
+            if (level === 'high') return 'Initiate ART within 1-2 weeks. Expedite resistance testing.';
+            return 'Initiate ART as soon as feasible (standard care target: <30 days from diagnosis).';
+        }
+        
+        function calculatePrognosis(cd4, viralLoad, age, egfr, oi, urgency) {
+            // Based on START/TEMPRANO data and life expectancy studies
+            let baseYears = 85 - age; // Normal life expectancy
+            let reduction = 0;
+            
+            if (cd4 < 200) reduction += 5;
+            else if (cd4 < 350) reduction += 2;
+            
+            if (viralLoad > 500000) reduction += 1;
+            if (egfr < 60) reduction += 2;
+            if (oi === 'aids') reduction += 3;
+            if (oi === 'mild') reduction += 1;
+            
+            let years = Math.max(baseYears - reduction, 1);
+            let survivalRate = Math.min(95, 85 + (cd4/1000)*20 - (oi === 'aids' ? 15 : 0));
+            let survivalColor = survivalRate > 90 ? '' : survivalRate > 75 ? 'medium' : 'low';
+            
+            let suppressionTime = cd4 < 200 ? '12-24 weeks' : '8-12 weeks';
+            if (viralLoad > 100000) suppressionTime = '12-24 weeks (high baseline VL)';
+            
+            let cvdRisk = age > 50 || cd4 < 350 ? 'Moderate-High' : 'Low-Moderate';
+            
+            let riskText = '';
+            if (cd4 < 200) {
+                riskText = 'High risk for AIDS-defining events. CD4 recovery may be suboptimal even with viral suppression. Monitor closely for non-AIDS events (CVD, malignancy).';
+            } else if (cd4 < 500) {
+                riskText = 'Moderate risk. Earlier ART initiation (as per START study) reduces serious non-AIDS events.';
+            } else {
+                riskText = 'Low immediate risk. Immediate ART recommended to prevent transmission and preserve immune function.';
+            }
+            
+            return { years, survivalRate, survivalColor, suppressionTime, cvdRisk, riskText };
+        }
+        
+        function generateRegimenRecommendations(cd4, viralLoad, hla, hbv, pregnancy, prep, egfr, artNaive) {
+            let html = '<div class="card"><h3><span class="icon">💊</span> Recommended Initial ART Regimens</h3>';
+            
+            // Determine applicable regimens
+            const regimens = [];
+            const warnings = [];
+            
+            // Check contraindications
+            if (hla === 'positive') {
+                warnings.push('ABC contraindicated (HLA-B*5701 positive)');
+            }
+            
+            if (prep === 'cab') {
+                warnings.push('<strong>CRITICAL:</strong> Prior CAB-LA exposure. Do NOT use INSTI-based regimen until genotype confirms sensitivity. Use boosted DRV + TAF/FTC pending results (AIII).');
+            }
+            
+            if (hbv === 'yes') {
+                warnings.push('HBV co-infection: Must use TDF or TAF + FTC/3TC as backbone');
+            }
+            
+            if (pregnancy === 'pregnant') {
+                warnings.push('Pregnancy: Avoid EVG/c and COBI-boosted regimens in 2nd/3rd trimester due to lower drug levels');
+            }
+            
+            if (egfr < 30) {
+                warnings.push('Severe renal impairment: Avoid TDF. TAF can be used if eGFR ≥30');
+            } else if (egfr < 60) {
+                warnings.push('Moderate renal impairment: Prefer TAF over TDF');
+            }
+            
+            // Primary Recommendations (Table 6a)
+            html += '<div class="regimen-box"><div class="regimen-title">Recommended Regimen for Most People (AI)</div>';
+            
+            if (prep !== 'cab' && hla !== 'positive') {
+                if (cd4 > 200 && viralLoad < 500000 && hbv !== 'yes') {
+                    html += `
+                        <p><strong>DTG/3TC</strong> (Dolutegravir 50mg + Lamivudine 300mg, once daily)</p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>Single tablet regimen</li>
+                            <li>High barrier to resistance</li>
+                            <li>Recommended if no HBV co-infection and VL <500,000</li>
+                        </ul>
+                    `;
+                } else {
+                    html += `
+                        <p><strong>BIC/TAF/FTC</strong> (Bictegravir 50mg/TAF 25mg/FTC 200mg, once daily)</p>
+                        <p>OR</p>
+                        <p><strong>DTG + (TAF or TDF) + (FTC or 3TC)</strong></p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>High barrier to resistance (BIC/DTG)</li>
+                            <li>Once daily dosing</li>
+                            <li>Active against HBV (if TAF/TDF used)</li>
+                        </ul>
+                    `;
+                }
+            } else {
+                html += '<p style="color: #c0392b;"><strong>See Alternative Regimens Below (Contraindications Present)</strong></p>';
+            }
+            html += '</div>';
+            
+            // Alternative regimens (Table 6b)
+            if (warnings.length > 0 || prep === 'cab' || hla === 'positive' || hbv === 'yes') {
+                html += '<h4 style="margin-top: 20px;">Alternative Regimens for Specific Scenarios:</h4>';
+                
+                if (prep === 'cab') {
+                    html += `
+                        <div class="recommendation">
+                            <strong>CAB-LA PrEP Exposure Protocol:</strong><br>
+                            Regimen: DRV/c or DRV/r + TAF/FTC (or TDF/FTC)<br>
+                            Note: Must obtain INSTI genotype. If sensitive, switch to INSTI-based regimen.
+                        </div>
+                    `;
+                }
+                
+                if (hla === 'positive' || (hla === 'unknown' && hbv !== 'yes')) {
+                    html += `
+                        <div class="recommendation">
+                            <strong>Non-ABC Options:</strong><br>
+                            DTG + TAF/FTC (if HBV positive)<br>
+                            or<br>
+                            DOR/TDF/3TC (if avoiding INSTI)
+                        </div>
+                    `;
+                }
+                
+                if (pregnancy === 'pregnant') {
+                    html += `
+                        <div class="recommendation">
+                            <strong>Pregnancy-Safe Options:</strong><br>
+                            Preferred: DTG + TAF/FTC or DTG + TDF/FTC<br>
+                            Avoid: COBI-containing regimens (2nd/3rd trimester)
+                        </div>
+                    `;
+                }
+            }
+            
+            // Display warnings
+            if (warnings.length > 0) {
+                html += '<div class="alert-box critical" style="margin-top: 15px;"><strong>Important Considerations:</strong><ul>';
+                warnings.forEach(w => html += `<li>${w}</li>`);
+                html += '</ul></div>';
+            }
+            
+            html += '</div>';
+            return html;
+        }
+        
+        function generateMonitoringSchedule(cd4, viralLoad, hbv, pregnancy) {
+            let html = '<div class="card"><h3><span class="icon">📅</span> Laboratory Monitoring Schedule (Table 3)</h3>';
+            
+            html += '<div class="table-responsive"><table>';
+            html += '<tr><th>Test</th><th>Frequency</th><th>Notes</th></tr>';
+            
+            // HIV Viral Load
+            html += '<tr><td>HIV RNA (Viral Load)</td><td>Baseline, 4-8 weeks, then every 3-4 months</td><td>Suppress to <50 copies/mL</td></tr>';
+            
+            // CD4 Count
+            if (cd4 < 300) {
+                html += '<tr style="background: #fff3cd;"><td>CD4 Count</td><td>Every 3-4 months</td><td>Low CD4: Monitor until >300 consistently</td></tr>';
+            } else {
+                html += '<tr><td>CD4 Count</td><td>Every 6-12 months</td><td>Can extend to annually if >300 and suppressed >2 years</td></tr>';
+            }
+            
+            // Basic Metabolic Panel
+            html += '<tr><td>Basic Metabolic Panel</td><td>Baseline, 4-8 weeks, then every 6-12 months</td><td>Renal function monitoring</td></tr>';
+            
+            // Liver Function
+            html += '<tr><td>Liver Enzymes (ALT/AST)</td><td>Baseline, 4-8 weeks, then every 6-12 months</td><td>' + (hbv === 'yes' ? 'Monitor closely for HBV flare' : '') + '</td></tr>';
+            
+            // Lipids
+            html += '<tr><td>Fasting Lipid Profile</td><td>3-6 months after start, then annually if >40 years</td><td>Assess CVD risk</td></tr>';
+            
+            // Resistance Testing
+            html += '<tr><td>Resistance Testing</td><td>At baseline if ART-naive; at failure if VL >200</td><td>Include integrase if prior INSTI exposure</td></tr>';
+            
+            // HBV
+            if (hbv === 'yes' || hbv === 'unknown') {
+                html += '<tr style="background: #fff3cd;"><td>HBV DNA</td><td>Every 6 months</td><td>Monitor for reactivation/flare</td></tr>';
+            }
+            
+            // Pregnancy
+            if (pregnancy === 'pregnant') {
+                html += '<tr style="background: #ffe6f0;"><td>HIV RNA</td><td>Monthly until undetectable, then every 2-3 months</td><td>Goal: <50 copies/mL by delivery</td></tr>';
+            }
+            
+            html += '</table></div>';
+            
+            // Timeline visualization
+            html += '<h4 style="margin-top: 20px;">Treatment Timeline</h4>';
+            html += '<div class="timeline">';
+            html += '<div class="timeline-item"><strong>Week 0:</strong> Initiate ART immediately (same day if possible)</div>';
+            html += '<div class="timeline-item"><strong>Week 2-4:</strong> Assess tolerance, review resistance results</div>';
+            html += '<div class="timeline-item"><strong>Week 4-8:</strong> Check viral load (expect 1-2 log drop)</div>';
+            html += '<div class="timeline-item"><strong>Week 12:</strong> Confirm viral suppression (<200 copies/mL)</div>';
+            html += '<div class="timeline-item"><strong>Week 24:</strong> Full viral suppression expected (<50 copies/mL)</div>';
+            html += '<div class="timeline-item"><strong>Ongoing:</strong> Monitor every 3-6 months</div>';
+            html += '</div>';
+            
+            html += '</div>';
+            return html;
+        }
+        
+        function generateResistanceGuidance(prep, artNaive, viralLoad) {
+            let html = '';
+            
+            if (prep === 'cab') {
+                html += `
+                    <div class="alert-box critical">
+                        <strong>Prior CAB-LA PrEP Use:</strong><br>
+                        INSTI resistance testing MUST be performed before starting INSTI-based regimen.<br>
+                        10 of 32 infections in HPTN 083 had major INSTI resistance mutations.<br>
+                        Start: Boosted DRV + TAF/FTC while awaiting results.
+                    </div>
+                `;
+            } else if (prep === 'oral') {
+                html += `
+                    <div class="alert-box">
+                        <strong>Prior Oral PrEP:</strong> Check for M184V/I mutation (FTC/3TC resistance). 
+                        If present, avoid DTG/3TC and use 3-drug regimen.
+                    </div>
+                `;
+            }
+            
+            if (artNaive === 'yes') {
+                html += `
+                    <div class="recommendation">
+                        <strong>ART-Naive Patient:</strong><br>
+                        • Genotypic testing for RT and PR genes at baseline (AII)<br>
+                        • Include INSTI if transmission from partner on INSTI suspected<br>
+                        • Do not delay ART initiation while awaiting results
+                    </div>
+                `;
+            }
+            
+            if (viralLoad > 0 && viralLoad < 1000) {
+                html += `<div class="alert-box">Low-level viremia: Resistance testing may be unsuccessful but should be attempted if VL >200 copies/mL.</div>`;
+            }
+            
+            return html;
+        }
+        
+        function generateSpecialConsiderations(hbv, pregnancy, egfr, cd4) {
+            let html = '<div class="card"><h3><span class="icon">🎯</span> Special Population Considerations</h3>';
+            
+            if (hbv === 'yes') {
+                html += `
+                    <div class="alert-box critical">
+                        <strong>HBV Co-infection Management:</strong><br>
+                        • Must use TDF or TAF + FTC or 3TC as part of regimen<br>
+                        • Do not use 3TC or FTC monotherapy for HBV (resistance risk)<br>
+                        • If stopping ART, continue HBV-active agents to prevent flare<br>
+                        • Monitor HBV DNA every 6 months
+                    </div>
+                `;
+            }
+            
+            if (pregnancy === 'pregnant' || pregnancy === 'planning') {
+                html += `
+                    <div class="recommendation" style="background: #ffe6f0; border-color: #e84393;">
+                        <strong>Pregnancy Considerations:</strong><br>
+                        • DTG is preferred INSTI (updated safety data - no increased NTD risk)<br>
+                        • BIC also preferred based on pregnancy PK data<br>
+                        • Avoid COBI-containing regimens in 2nd/3rd trimester<br>
+                        • Goal: Undetectable VL by delivery<br>
+                        • Refer to Perinatal Guidelines for detailed recommendations
+                    </div>
+                `;
+            }
+            
+            if (egfr < 60) {
+                html += `
+                    <div class="alert-box">
+                        <strong>Renal Impairment:</strong><br>
+                        eGFR ${egfr} mL/min<br>
+                        ${egfr < 30 ? '• Avoid TDF entirely<br>• TAF acceptable if eGFR ≥30<br>• Consider ABC/3TC if HLA-B*5701 negative' : '• Prefer TAF over TDF<br>• Monitor renal function closely'}
+                    </div>
+                `;
+            }
+            
+            if (cd4 < 200) {
+                html += `
+                    <div class="alert-box critical">
+                        <strong>AIDS-Associated Conditions Risk:</strong><br>
+                        • Consider PCP prophylaxis (TMP-SMX DS daily or 3x weekly)<br>
+                        • Screen for TB (IGRA or TST)<br>
+                        • Risk of IRIS is high when starting ART<br>
+                        • Suboptimal CD4 recovery possible despite viral suppression
+                    </div>
+                `;
+            }
+            
+            // Treatment as Prevention
+            html += `
+                <div class="recommendation" style="margin-top: 15px;">
+                    <strong>U=U (Undetectable = Untransmittable):</strong><br>
+                    Counsel patient that maintaining VL <200 copies/mL prevents sexual HIV transmission.<br>
+                    Use additional prevention (condoms/PrEP for partners) until 6 months of suppression confirmed.
+                </div>
+            `;
+            
+            html += '</div>';
+            return html;
+        }
+        
+        // Auto-save on input change
+        document.querySelectorAll('input, select').forEach(input => {
+            input.addEventListener('change', saveData);
+        });
+    </script>
+</body>
+</html>
